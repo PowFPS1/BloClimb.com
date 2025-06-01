@@ -1,4 +1,4 @@
-![bloclimblogo (2)-1400w](https://github.com/user-attachments/assets/85e7f221-e073-4461-a38a-43c38e102a81)
+![bloclimblogo (2)-1400w](https://github.com/user-attachments/assets/85e7f221-e073-4461-a38a-43c38e102a81) 
 
 # 🧗‍♂️ BloClimb Website
 
