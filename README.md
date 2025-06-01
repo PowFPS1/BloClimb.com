@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/ebb4149e-cc74-4e67-a538-2771975f00c6)
+                                                                                          ![image](https://github.com/user-attachments/assets/ebb4149e-cc74-4e67-a538-2771975f00c6)
 
 # 🧗‍♂️ BloClimb Website
 
