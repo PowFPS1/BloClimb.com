@@ -12,21 +12,6 @@ Welcome to the official **BloClimb** website repo — home of the online experie
 
 ---
 
-## 📁 Project Structure
-
-/
-├── index.html # Main landing page
-├── about.html # Info about the game & team
-├── contact.html # Contact form or links
-├── styles/ # CSS stylesheets
-│ └── main.css
-├── scripts/ # Optional JavaScript files
-│ └── main.js
-├── assets/ # Images, logos, and assets
-└── README.md # You're here!
-
----
-
 ## 🚧 Status
 
 This website is **in active development**. Expect updates frequently as we finalize visuals, UI, and content.
