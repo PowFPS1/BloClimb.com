@@ -30,7 +30,7 @@
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="BloClimb Bouldering - The First Bouldering Game on Roblox!" />
-    <meta name="twitter:description" content="Join BloClimb, the first official rock climbing group and bouldering game on Roblox! Apply, train, rank up, and have fun!" />
+    <meta name="twitter:description" content="Join BloClimb, the first official rock climbing group and bouldering game on Roblox!" />
     <meta name="twitter:image" content="https://powfps1.github.io/BloClimb.com/images/share-preview.png" />
     <!-- ========= SHARE PREVIEW META TAGS END =========== -->
 
@@ -50,38 +50,105 @@
         .font-lilita-one {
             font-family: 'Lilita One', cursive;
         }
+        /* Custom button gradient and shadow for a more dynamic look */
+        .btn-primary {
+            background-image: linear-gradient(to right, #6366f1, #8b5cf6); /* Indigo to Violet */
+            box-shadow: 0 4px 14px 0 rgba(99, 102, 241, 0.3);
+        }
+        .btn-primary:hover {
+            background-image: linear-gradient(to right, #8b5cf6, #6366f1);
+            box-shadow: 0 6px 20px 0 rgba(139, 92, 246, 0.4);
+        }
+        .btn-green {
+            background-image: linear-gradient(to right, #22c55e, #16a34a); /* Green */
+            box-shadow: 0 4px 14px 0 rgba(34, 197, 94, 0.3);
+        }
+        .btn-green:hover {
+            background-image: linear-gradient(to right, #16a34a, #22c55e);
+            box-shadow: 0 6px 20px 0 rgba(22, 163, 74, 0.4);
+        }
+        .btn-blue {
+            background-image: linear-gradient(to right, #3b82f6, #2563eb); /* Blue */
+            box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.3);
+        }
+        .btn-blue:hover {
+            background-image: linear-gradient(to right, #2563eb, #3b82f6);
+            box-shadow: 0 6px 20px 0 rgba(37, 99, 235, 0.4);
+        }
+        .btn-purple {
+            background-image: linear-gradient(to right, #a855f7, #9333ea); /* Purple */
+            box-shadow: 0 4px 14px 0 rgba(168, 85, 247, 0.3);
+        }
+        .btn-purple:hover {
+            background-image: linear-gradient(to right, #9333ea, #a855f7);
+            box-shadow: 0 6px 20px 0 rgba(147, 51, 234, 0.4);
+        }
+        .btn-red {
+            background-image: linear-gradient(to right, #ef4444, #dc2626); /* Red */
+            box-shadow: 0 4px 14px 0 rgba(239, 68, 68, 0.3);
+        }
+        .btn-red:hover {
+            background-image: linear-gradient(to right, #dc2626, #ef4444);
+            box-shadow: 0 6px 20px 0 rgba(220, 38, 38, 0.4);
+        }
+        .btn-yellow {
+            background-image: linear-gradient(to right, #eab308, #d97706); /* Yellow/Orange */
+            box-shadow: 0 4px 14px 0 rgba(234, 179, 8, 0.3);
+        }
+        .btn-yellow:hover {
+            background-image: linear-gradient(to right, #d97706, #eab308);
+            box-shadow: 0 6px 20px 0 rgba(217, 119, 6, 0.4);
+        }
+
+        /* Card hover effect */
+        .card-hover-effect:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
     </style>
 </head>
 <body class="antialiased">
-    <div class="min-h-screen flex flex-col items-center py-8 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-100 to-gray-200">
+    <div class="min-h-screen flex flex-col items-center py-8 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-100 to-gray-300">
         <!-- Hero Section -->
-        <div class="flex flex-col items-center text-center mb-12 max-w-4xl w-full">
-            <img alt="BloClimb Game Logo" src="images/bloclimblogo%20%282%29-1400w.png" class="w-64 sm:w-80 md:w-96 lg:w-1/2 h-auto mb-6 rounded-xl shadow-lg">
-            <a href="https://www.roblox.com/groups/34426524/BloClimb#!/about" target="_blank" rel="noreferrer noopener"
-               class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 mb-4">
-                <img alt="Roblox Icon" src="images/thorium_anvhyn3ozr-200h.png" class="h-6 w-6 mr-2">
-                Join Our Roblox Group!
-            </a>
-            <p class="text-xl sm:text-2xl text-gray-700 font-medium leading-relaxed max-w-2xl">
-                BloClimb is the first bouldering game on Roblox! Join our official rock climbing group, apply, train, rank up, and have fun!
-            </p>
+        <div class="relative w-full max-w-6xl rounded-3xl overflow-hidden shadow-2xl mb-16 bg-white p-8">
+            <!-- Background overlay for text readability -->
+            <div class="absolute inset-0 bg-gradient-to-br from-indigo-700 to-purple-800 opacity-90 z-0 rounded-3xl"></div>
+            <!-- Background image - replace with a relevant bouldering image if available -->
+            <img src="https://placehold.co/1200x400/312e81/ffffff?text=BloClimb+Hero+Image" alt="Bouldering Background" class="absolute inset-0 w-full h-full object-cover z-0 opacity-20 rounded-3xl">
+
+            <div class="relative z-10 flex flex-col items-center text-center text-white py-12 px-4">
+                <img alt="BloClimb Game Logo" src="images/bloclimblogo%20%282%29-1400w.png" class="w-56 sm:w-72 md:w-80 lg:w-96 h-auto mb-8 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-lilita-one mb-6 leading-tight">
+                    Conquer the Walls, Master the Climb!
+                </h1>
+                <p class="text-xl sm:text-2xl text-indigo-100 font-medium leading-relaxed max-w-3xl mb-8">
+                    BloClimb is the first bouldering game on Roblox! Join our official rock climbing group, apply, train, rank up, and have fun!
+                </p>
+                <a href="https://www.roblox.com/groups/34426524/BloClimb#!/about" target="_blank" rel="noreferrer noopener"
+                   class="inline-flex items-center justify-center px-10 py-4 border border-transparent text-lg font-bold rounded-full shadow-lg text-white btn-primary
+                          focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-indigo-300 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+                    <img alt="Roblox Icon" src="images/thorium_anvhyn3ozr-200h.png" class="h-7 w-7 mr-3">
+                    Join Our Roblox Group!
+                </a>
+            </div>
         </div>
 
         <!-- Main Content Sections -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl w-full">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl w-full mb-16">
 
             <!-- BloClimb Game Section -->
-            <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col md:flex-row items-center p-6 transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-                <div class="md:w-1/2 flex justify-center mb-6 md:mb-0">
-                    <img alt="BloClimb Game Screenshot" src="images/bc11121-li54-600w.png" class="w-full h-auto object-cover rounded-lg shadow-md">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col items-center p-8 transition duration-300 card-hover-effect">
+                <div class="flex justify-center mb-6">
+                    <img alt="BloClimb Game Screenshot" src="images/bc11121-li54-600w.png" class="w-full h-auto object-cover rounded-lg shadow-md border-4 border-gray-100">
                 </div>
-                <div class="md:w-1/2 md:pl-8 text-center md:text-left">
+                <div class="text-center">
                     <h2 class="text-3xl sm:text-4xl font-lilita-one text-indigo-700 mb-3">BloClimb Game</h2>
                     <p class="text-gray-600 text-lg mb-6 leading-relaxed">
                         BloClimb is the first Official Rock Climbing Group on Roblox, a place for everyone to have fun, compete, meet and work!
                     </p>
                     <a href="https://www.roblox.com/games/17784344028/NEW-BloClimb-Bouldering-V1" target="_blank" rel="noreferrer noopener"
-                       class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition duration-300 ease-in-out">
+                       class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full shadow-md text-white btn-green
+                              focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5">
                         <img alt="Play Icon" src="images/image65443-d4re-200h.png" class="h-5 w-5 mr-2">
                         PLAY NOW
                     </a>
@@ -89,17 +156,18 @@
             </div>
 
             <!-- Application Center Section -->
-            <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col md:flex-row-reverse items-center p-6 transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-                <div class="md:w-1/2 flex justify-center mb-6 md:mb-0">
-                    <img alt="Application Center Screenshot" src="images/bc11135-vwet-600w.png" class="w-full h-auto object-cover rounded-lg shadow-md">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col items-center p-8 transition duration-300 card-hover-effect">
+                <div class="flex justify-center mb-6">
+                    <img alt="Application Center Screenshot" src="images/bc11135-vwet-600w.png" class="w-full h-auto object-cover rounded-lg shadow-md border-4 border-gray-100">
                 </div>
-                <div class="md:w-1/2 md:pr-8 text-center md:text-right">
+                <div class="text-center">
                     <h2 class="text-3xl sm:text-4xl font-lilita-one text-indigo-700 mb-3">The Application Center</h2>
                     <p class="text-gray-600 text-lg mb-6 leading-relaxed">
                         If you would like to apply for a job at BloClimb, then you have come to the right place! Visit our training center, fill in the application form and we will see you soon at the training center!
                     </p>
                     <a href="https://www.roblox.com/games/18240790272/Application-Center" target="_blank" rel="noreferrer noopener"
-                       class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300 ease-in-out">
+                       class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full shadow-md text-white btn-blue
+                              focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5">
                         <img alt="Apply Icon" src="images/image65443-d4re-200h.png" class="h-5 w-5 mr-2">
                         APPLY NOW
                     </a>
@@ -107,17 +175,18 @@
             </div>
 
             <!-- Training Center Section -->
-            <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col md:flex-row items-center p-6 transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-                <div class="md:w-1/2 flex justify-center mb-6 md:mb-0">
-                    <img alt="Training Center Screenshot" src="images/bc11143-xl8l-600w.png" class="w-full h-auto object-cover rounded-lg shadow-md">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col items-center p-8 transition duration-300 card-hover-effect">
+                <div class="flex justify-center mb-6">
+                    <img alt="Training Center Screenshot" src="images/bc11143-xl8l-600w.png" class="w-full h-auto object-cover rounded-lg shadow-md border-4 border-gray-100">
                 </div>
-                <div class="md:w-1/2 md:pl-8 text-center md:text-left">
+                <div class="text-center">
                     <h2 class="text-3xl sm:text-4xl font-lilita-one text-indigo-700 mb-3">The Training Center</h2>
                     <p class="text-gray-600 text-lg mb-6 leading-relaxed">
                         Are you a BloClimber who wants to move up? Attend a training session at the Training Center and learn a lot of new things!
                     </p>
                     <a href="https://www.roblox.com/games/18445779042/Training-Center" target="_blank" rel="noreferrer noopener"
-                       class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition duration-300 ease-in-out">
+                       class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full shadow-md text-white btn-purple
+                              focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5">
                         <img alt="Train Icon" src="images/image65443-d4re-200h.png" class="h-5 w-5 mr-2">
                         TRAIN NOW
                     </a>
@@ -125,35 +194,37 @@
             </div>
 
             <!-- Ranking Center Section -->
-            <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col md:flex-row-reverse items-center p-6 transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-                <div class="md:w-1/2 flex justify-center mb-6 md:mb-0">
-                    <img alt="Ranking Center Screenshot" src="images/bc11157-xebk-600w.png" class="w-full h-auto object-cover rounded-lg shadow-md">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col items-center p-8 transition duration-300 card-hover-effect">
+                <div class="flex justify-center mb-6">
+                    <img alt="Ranking Center Screenshot" src="images/bc11157-xebk-600w.png" class="w-full h-auto object-cover rounded-lg shadow-md border-4 border-gray-100">
                 </div>
-                <div class="md:w-1/2 md:pr-8 text-center md:text-right">
+                <div class="text-center">
                     <h2 class="text-3xl sm:text-4xl font-lilita-one text-indigo-700 mb-3">The Ranking Center</h2>
                     <p class="text-gray-600 text-lg mb-6 leading-relaxed">
                         Want to skip the wait and get a new rank instantly? The Ranking Center is the place to do it! Simply buy a new rank and receive it instantly!
                     </p>
                     <a href="https://www.roblox.com/games/18561495426/Ranking-Center" target="_blank" rel="noreferrer noopener"
-                       class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition duration-300 ease-in-out">
+                       class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full shadow-md text-white btn-red
+                              focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5">
                         <img alt="Rank Up Icon" src="images/image65443-d4re-200h.png" class="h-5 w-5 mr-2">
                         RANK UP
                     </a>
                 </div>
             </div>
 
-            <!-- BloClimb Handbook Section -->
-            <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col md:flex-row items-center p-6 col-span-1 md:col-span-2 transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-                <div class="md:w-1/2 flex justify-center mb-6 md:mb-0">
-                    <img alt="BloClimb Handbook Image" src="images/image15433-taf-200h.png" class="w-full h-auto object-cover rounded-lg shadow-md max-w-xs">
+            <!-- BloClimb Handbook Section (Full Width) -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row items-center p-8 col-span-1 md:col-span-2 transition duration-300 card-hover-effect">
+                <div class="md:w-1/3 flex justify-center mb-6 md:mb-0">
+                    <img alt="BloClimb Handbook Image" src="images/image15433-taf-200h.png" class="w-48 h-auto object-cover rounded-lg shadow-md border-4 border-gray-100">
                 </div>
-                <div class="md:w-1/2 md:pl-8 text-center md:text-left">
+                <div class="md:w-2/3 md:pl-8 text-center md:text-left">
                     <h2 class="text-3xl sm:text-4xl font-lilita-one text-indigo-700 mb-3">BloClimb Handbook</h2>
                     <p class="text-gray-600 text-lg mb-6 leading-relaxed">
-                        More information about the trainings and more can be found here! Dive deep into the BloClimb world.
+                        More information about the trainings and more can be found here! Dive deep into the BloClimb world and understand all the rules and guidelines.
                     </p>
                     <a href="https://docs.google.com/document/d/1ym1tGlK4hKnFOXDuQCQBNFCleKhiRYX4HLUddI6VkPo/edit?usp=sharing" target="_blank" rel="noreferrer noopener"
-                       class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-yellow-600 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 transition duration-300 ease-in-out">
+                       class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full shadow-md text-white btn-yellow
+                              focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5">
                         <img alt="Handbook Icon" src="images/image65443-d4re-200h.png" class="h-5 w-5 mr-2">
                         READ HANDBOOK
                     </a>
@@ -165,34 +236,37 @@
         <div class="mt-12 w-full max-w-4xl text-center">
             <h2 class="text-4xl font-lilita-one text-indigo-800 mb-8">Our Leadership</h2>
             <div class="flex flex-col sm:flex-row justify-center gap-8 mb-12">
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl">
-                    <img alt="WeirdThePurple Profile" src="images/weird.png" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-indigo-500 shadow-md">
-                    <span class="text-xl font-semibold text-gray-800">WeirdThePurple</span>
-                    <span class="text-md text-gray-600">Chairman</span>
+                <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center transform transition duration-300 card-hover-effect">
+                    <img alt="WeirdThePurple Profile" src="images/weird.png" class="w-36 h-36 rounded-full object-cover mb-4 border-4 border-indigo-500 shadow-lg">
+                    <span class="text-2xl font-semibold text-gray-800">WeirdThePurple</span>
+                    <span class="text-lg text-gray-600">Chairman</span>
                 </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-xl">
-                    <img alt="PowFPS1 Profile" src="images/pow.png" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-indigo-500 shadow-md">
-                    <span class="text-xl font-semibold text-gray-800">PowFPS1</span>
-                    <span class="text-md text-gray-600">Vice-Chairman</span>
+                <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center transform transition duration-300 card-hover-effect">
+                    <img alt="PowFPS1 Profile" src="images/pow.png" class="w-36 h-36 rounded-full object-cover mb-4 border-4 border-indigo-500 shadow-lg">
+                    <span class="text-2xl font-semibold text-gray-800">PowFPS1</span>
+                    <span class="text-lg text-gray-600">Vice-Chairman</span>
                 </div>
             </div>
         </div>
 
         <!-- Footer Section -->
-        <footer class="w-full max-w-4xl text-center mt-12 pt-8 border-t border-gray-300">
-            <p class="text-sm text-gray-600 mb-6 leading-relaxed">
-                This website has no commercial intent and is not affiliated with Roblox! If you have a problem, please contact us on our Discord server!
-                <a href="https://discord.gg/dsBGYzTA5x" target="_blank" rel="noreferrer noopener" class="text-blue-600 hover:underline">https://discord.gg/dsBGYzTA5x</a>
+        <footer class="w-full max-w-6xl text-center mt-16 pt-10 border-t-2 border-gray-300 bg-gray-50 rounded-t-3xl py-8 px-4">
+            <p class="text-md text-gray-700 mb-6 leading-relaxed max-w-3xl mx-auto">
+                This website has no commercial intent and is not affiliated with Roblox! If you have any problems or questions, please contact us on our official Discord server.
             </p>
-            <div class="flex justify-center space-x-6 mb-8">
-                <a href="https://www.tiktok.com/@bloclimb" target="_blank" rel="noreferrer noopener" class="transform transition duration-300 hover:scale-110">
-                    <img alt="TikTok Icon" src="images/design%20ohne%20titel%20%2820%29-300w.png" class="h-10 w-10">
+            <a href="https://discord.gg/dsBGYzTA5x" target="_blank" rel="noreferrer noopener" class="text-blue-600 hover:underline text-lg font-medium mb-8 block">
+                Join our Discord: https://discord.gg/dsBGYzTA5x
+            </a>
+            <div class="flex justify-center space-x-8 mb-8">
+                <a href="https://www.tiktok.com/@bloclimb" target="_blank" rel="noreferrer noopener" class="transform transition duration-300 hover:scale-125">
+                    <img alt="TikTok Icon" src="images/design%20ohne%20titel%20%2820%29-300w.png" class="h-12 w-12">
                 </a>
-                <a href="https://discord.gg/dsBGYzTA5x" target="_blank" rel="noreferrer noopener" class="transform transition duration-300 hover:scale-110">
-                    <img alt="Discord Icon" src="images/design%20ohne%20titel%20%2819%29-300w.png" class="h-10 w-10">
+                <a href="https://discord.gg/dsBGYzTA5x" target="_blank" rel="noreferrer noopener" class="transform transition duration-300 hover:scale-125">
+                    <img alt="Discord Icon" src="images/design%20ohne%20titel%20%2819%29-300w.png" class="h-12 w-12">
                 </a>
             </div>
-            <img alt="BloClimb Logo" src="images/bloclimblogo%20%282%29-1400w.png" class="w-40 h-auto mx-auto opacity-75">
+            <img alt="BloClimb Logo" src="images/bloclimblogo%20%282%29-1400w.png" class="w-48 h-auto mx-auto opacity-80">
+            <p class="text-sm text-gray-500 mt-4">&copy; 2025 BloClimb Bouldering. All rights reserved.</p>
         </footer>
     </div>
 </body>
