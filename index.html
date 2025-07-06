@@ -41,71 +41,162 @@
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
 
     <style>
-        /* Custom styles to ensure Inter is the default font and Lilita One for specific headings */
+        /* Dark theme base */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8f8f8; /* Light background */
-            color: #333; /* Dark text for readability */
+            background: #101014;
+            color: #f5f5f5;
+            transition: background 0.5s, color 0.5s;
         }
         .font-lilita-one {
             font-family: 'Lilita One', cursive;
+            letter-spacing: 0.04em;
         }
-        /* Custom button gradient and shadow for a more dynamic look */
-        .btn-primary {
-            background-image: linear-gradient(to right, #6366f1, #8b5cf6); /* Indigo to Violet */
-            box-shadow: 0 4px 14px 0 rgba(99, 102, 241, 0.3);
+        /* Glassmorphism effect */
+        .glass {
+            background: rgba(20, 20, 25, 0.7);
+            box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 2rem;
+            border: 1px solid rgba(255,255,255,0.08);
         }
-        .btn-primary:hover {
-            background-image: linear-gradient(to right, #8b5cf6, #6366f1);
-            box-shadow: 0 6px 20px 0 rgba(139, 92, 246, 0.4);
+        /* Card and section fade-in animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
         }
-        .btn-green {
-            background-image: linear-gradient(to right, #22c55e, #16a34a); /* Green */
-            box-shadow: 0 4px 14px 0 rgba(34, 197, 94, 0.3);
+        .fade-in.visible {
+            opacity: 1;
+            transform: none;
         }
-        .btn-green:hover {
-            background-image: linear-gradient(to right, #16a34a, #22c55e);
-            box-shadow: 0 6px 20px 0 rgba(22, 163, 74, 0.4);
-        }
-        .btn-blue {
-            background-image: linear-gradient(to right, #3b82f6, #2563eb); /* Blue */
-            box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.3);
-        }
-        .btn-blue:hover {
-            background-image: linear-gradient(to right, #2563eb, #3b82f6);
-            box-shadow: 0 6px 20px 0 rgba(37, 99, 235, 0.4);
-        }
-        .btn-purple {
-            background-image: linear-gradient(to right, #a855f7, #9333ea); /* Purple */
-            box-shadow: 0 4px 14px 0 rgba(168, 85, 247, 0.3);
-        }
-        .btn-purple:hover {
-            background-image: linear-gradient(to right, #9333ea, #a855f7);
-            box-shadow: 0 6px 20px 0 rgba(147, 51, 234, 0.4);
-        }
-        .btn-red {
-            background-image: linear-gradient(to right, #ef4444, #dc2626); /* Red */
-            box-shadow: 0 4px 14px 0 rgba(239, 68, 68, 0.3);
-        }
-        .btn-red:hover {
-            background-image: linear-gradient(to right, #dc2626, #ef4444);
-            box-shadow: 0 6px 20px 0 rgba(220, 38, 38, 0.4);
-        }
-        .btn-yellow {
-            background-image: linear-gradient(to right, #eab308, #d97706); /* Yellow/Orange */
-            box-shadow: 0 4px 14px 0 rgba(234, 179, 8, 0.3);
-        }
-        .btn-yellow:hover {
-            background-image: linear-gradient(to right, #d97706, #eab308);
-            box-shadow: 0 6px 20px 0 rgba(217, 119, 6, 0.4);
-        }
-
         /* Card hover effect */
+        .card-hover-effect {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
         .card-hover-effect:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            transform: translateY(-8px) scale(1.04);
+            box-shadow: 0 15px 40px 0 rgba(255,255,255,0.08), 0 2px 8px 0 rgba(0,0,0,0.18);
+        }
+        /* Button styles */
+        .btn-primary, .btn-green, .btn-blue, .btn-purple, .btn-red, .btn-yellow {
+            background: linear-gradient(90deg, #232323 0%, #444 100%);
+            color: #fff;
+            border: 2px solid #fff2;
+            border-radius: 9999px;
+            box-shadow: 0 4px 14px 0 rgba(255,255,255,0.05);
+            transition: background 0.3s, box-shadow 0.3s, border 0.3s;
+        }
+        .btn-primary:hover, .btn-green:hover, .btn-blue:hover, .btn-purple:hover, .btn-red:hover, .btn-yellow:hover {
+            background: linear-gradient(90deg, #fff 0%, #232323 100%);
+            color: #101014;
+            border: 2px solid #fff;
+            box-shadow: 0 6px 24px 0 rgba(255,255,255,0.12);
+        }
+        /* Section divider (wave) */
+        .section-divider {
+            width: 100%;
+            height: 40px;
+            background: url('data:image/svg+xml;utf8,<svg width="100%" height="40" viewBox="0 0 1440 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h1440v40H0V0z" fill="%23101014"/><path d="M0 0c120 40 360 40 720 0s600 40 720 0v40H0V0z" fill="%23222222"/></svg>') no-repeat center/cover;
+        }
+        /* Social icon hover */
+        .social-icon {
+            filter: grayscale(1) brightness(1.5);
+            transition: filter 0.3s, transform 0.3s;
+        }
+        .social-icon:hover {
+            filter: grayscale(0) brightness(1.2);
+            transform: scale(1.15) rotate(-6deg);
+        }
+        /* Scroll-to-top button */
+        #scrollTopBtn {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            z-index: 50;
+            background: rgba(30,30,30,0.85);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s, background 0.3s;
+        }
+        #scrollTopBtn.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        #scrollTopBtn:hover {
+            background: #fff;
+            color: #101014;
+        }
+        /* Features section */
+        .feature-icon {
+            background: rgba(255,255,255,0.08);
+            border-radius: 1rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            display: inline-block;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+            transition: background 0.3s, transform 0.3s;
+        }
+        .feature-icon:hover {
+            background: rgba(255,255,255,0.18);
+            transform: scale(1.12) rotate(-4deg);
+        }
+        /* Footer */
+        footer {
+            background: rgba(20,20,25,0.95);
+            color: #bbb;
+            border-top: 2px solid #222;
+        }
+        /* Responsive tweaks */
+        @media (max-width: 640px) {
+            .glass { border-radius: 1rem; }
+            .feature-icon { font-size: 2rem; }
         }
     </style>
+    <script>
+    // Fade-in animation on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+        const fadeEls = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        fadeEls.forEach(el => observer.observe(el));
+    });
+    // Scroll-to-top button
+    window.addEventListener('DOMContentLoaded', function() {
+        const btn = document.createElement('button');
+        btn.id = 'scrollTopBtn';
+        btn.innerHTML = '↑';
+        document.body.appendChild(btn);
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                btn.classList.add('visible');
+            } else {
+                btn.classList.remove('visible');
+            }
+        });
+        btn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    });
+    </script>
 </head>
 <body class="antialiased">
     <div class="min-h-screen flex flex-col items-center py-8 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-100 to-gray-300">
